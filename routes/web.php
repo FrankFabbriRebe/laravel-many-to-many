@@ -14,3 +14,5 @@ Route::get('/types', [TypesController::class, 'index']);
 Route::get('/technologies', [TechnologiesController::class, 'index']);
 
 Route::get('/create', [ProjectsController::class, 'create'])->name('route.createNewProject');
+
+Route::post('/create', [ProjectsController::class, 'store'])->name('route.storeNewProject');
