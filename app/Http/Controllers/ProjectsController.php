@@ -17,4 +17,12 @@ class ProjectsController extends Controller
         return view('pages.index', compact("projects"));
 
     }
+
+    public function create()
+    {
+
+        return view('pages.create');
+
+    }
+
 }
