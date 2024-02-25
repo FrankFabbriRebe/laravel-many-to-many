@@ -24,6 +24,15 @@
 
     <br>
 
+    <label for="type_id">Type</label>
+    <select name="type_id" id="type_id">
+        @foreach ($types as $type)
+        <option value="{{ $type -> id}}">{{ $type -> name }}</option>
+        @endforeach
+    </select>
+
+    <br>
+
     @foreach ($technologies as $technology)
     <input type="checkbox" name="technology_id[]" id="{{ 'technology_id_' . $technology -> id }}"
         value="{{ $technology -> id }}">
