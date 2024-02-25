@@ -12,7 +12,9 @@ class TechnologiesController extends Controller
     public function index()
     {
 
-        return view('pages.technologies.index');
+        $technologies = Technology::all();
+
+        return view('pages.technologies.index', compact("technologies"));
 
     }
 }
