@@ -6,6 +6,12 @@
 
 @section('content')
 <h1>Project list</h1>
+
+<!-- link to get create page -->
+<a href="{{ route('route.createNewProject') }}">
+    Click here to create a new project
+</a>
+
 <ul>
     @foreach ($projects as $project)
     <li>
