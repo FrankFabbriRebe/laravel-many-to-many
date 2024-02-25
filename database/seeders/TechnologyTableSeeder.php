@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 
 // import model
 use App\Models\Technology;
+use App\Models\Project;
 
 class TechnologyTableSeeder extends Seeder
 {
@@ -18,7 +19,17 @@ class TechnologyTableSeeder extends Seeder
     public function run()
     {
         Technology::factory()
+
             ->count(10)
-            ->create();
+            ->create()
+
+            ->each(function ($technology) {
+
+                $projects = Project::inRandomOrder()->limit(3)->get();
+                $technology->projects()->attach($projects);
+                $technology->save();
+
+            });
+
     }
 }
