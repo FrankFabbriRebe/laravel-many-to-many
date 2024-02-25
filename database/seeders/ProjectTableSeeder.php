@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 // import model
 use App\Models\Project;
 use App\Models\Type;
+use App\Models\Technology;
 
 class ProjectTableSeeder extends Seeder
 {

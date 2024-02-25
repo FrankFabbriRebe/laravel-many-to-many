@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 // import model
 use App\Models\Project;
+use App\Models\Technology;
+
 
 class ProjectsController extends Controller
 {
@@ -21,7 +23,9 @@ class ProjectsController extends Controller
     public function create()
     {
 
-        return view('pages.create');
+        $technologies = Technology::all();
+
+        return view('pages.create', compact("technologies"));
 
     }
 
