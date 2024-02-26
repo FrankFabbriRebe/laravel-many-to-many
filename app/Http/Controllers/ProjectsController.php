@@ -57,12 +57,31 @@ class ProjectsController extends Controller
 
         $project = Project::find($id);
 
-        return view('pages.edit', compact('project'));
+        $types = Type::all();
+        $technologies = Technology::all();
+
+        return view('pages.edit', compact('project', 'types', 'technologies'));
 
     }
 
     public function update(Request $request, $id)
     {
+
+        $data = $request->all();
+
+        $type = Type::find($data['type_id']);
+
+        $project = Project::find($id);
+        $project->name = $data['name'];
+        $project->author = $data['author'];
+
+        $project->type()->associate($type);
+
+        $project->save();
+
+        $project->technologies()->sync($data['technology_id']);
+
+        return redirect()->route('route.index');
 
     }
 
