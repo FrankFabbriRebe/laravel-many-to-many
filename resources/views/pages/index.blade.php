@@ -10,6 +10,9 @@
 <!-- link to get create page -->
 <a href="{{ route('route.createNewProject') }}">
     Click here to create a new project
+    <br>
+    <br>
+    <br>
 </a>
 
 <ul>
@@ -20,15 +23,14 @@
         <span>{{ $project -> name }}</span>
         <br>
 
-        <strong>Type name: </strong>
+        <h3>Type name: </h3>
         <span>{{ $project -> type -> name}}</span>
 
-        <span>
-            <strong>Technology name: </strong>
-            @foreach ($project -> technologies as $technology)
-            #{{ $technology -> name }}
-            @endforeach
-        </span>
+
+        <h3>Technology name: </h3>
+        @foreach ($project -> technologies as $technology)
+        #{{ $technology -> name }}
+        @endforeach
 
         <!-- link to get edit page -->
         <a href="{{ route('route.editProject', $project -> id) }}">
@@ -36,6 +38,12 @@
         </a>
 
     </li>
+
+    <br>
+    <br>
+    <br>
+
     @endforeach
+
 </ul>
 @endsection
