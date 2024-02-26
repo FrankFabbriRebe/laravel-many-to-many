@@ -18,3 +18,5 @@ Route::get('/create', [ProjectsController::class, 'create'])->name('route.create
 Route::post('/create', [ProjectsController::class, 'store'])->name('route.storeNewProject');
 
 Route::get('/{id}/edit', [ProjectsController::class, 'edit'])->name('route.editProject');
+
+Route::put('/{id}', [ProjectsController::class, 'update'])->name('route.update');
