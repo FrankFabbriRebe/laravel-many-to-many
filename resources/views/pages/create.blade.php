@@ -34,11 +34,11 @@
     <br>
 
     @foreach ($technologies as $technology)
-    <input type="checkbox" name="technology_id[]" id="{{ 'technology_id_' . $technology -> id }}"
-        value="{{ $technology -> id }}">
     <label for="{{ 'technology_id_' . $technology -> id }}">
         {{ $technology -> name }}
     </label>
+    <input type="checkbox" name="technology_id[]" id="{{ 'technology_id_' . $technology -> id }}"
+        value="{{ $technology -> id }}">
     <br>
 
     @endforeach
