@@ -9,10 +9,10 @@
 <h1>Edit project</h1>
 
 <!-- FORM TO EDIT A PROJECT -->
-<form action="{{ route('route.update', $project -> id) }}" method="POST">
+<form action="{{route('route.updateProject', $project->id)}}" method="POST">
 
     @csrf
-    @method('POST')
+    @method('PUT')
 
     <label for="name">Name</label>
     <input type="text" name="name" id="name" value="{{ $project -> name }}">
