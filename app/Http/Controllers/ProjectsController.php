@@ -52,4 +52,11 @@ class ProjectsController extends Controller
         return redirect()->route('route.index');
     }
 
+    public function edit($id)
+    {
+
+
+
+    }
+
 }
