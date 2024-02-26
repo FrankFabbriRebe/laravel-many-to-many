@@ -30,6 +30,11 @@
             @endforeach
         </span>
 
+        <!-- link to get edit page -->
+        <a href="{{ route('route.editProject', $project -> id) }}">
+            Clik here to edit project
+        </a>
+
     </li>
     @endforeach
 </ul>
