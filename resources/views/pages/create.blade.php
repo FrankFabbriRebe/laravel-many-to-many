@@ -42,7 +42,7 @@
     @endforeach
 
     <label for="image">Image</label>
-    <input type="file" name="image" id="image" accept="image/png">
+    <input type="file" name="image" id="image">
 
     <br>
     <br>
