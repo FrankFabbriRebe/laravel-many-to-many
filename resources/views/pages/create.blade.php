@@ -9,12 +9,12 @@
 <h1>Create a new project</h1>
 
 <!-- FORM TO CREATE NEW PROJECT -->
-<form action="{{ route('route.storeNewProject') }}" method="POST">
+<form action="{{ route('route.storeNewProject') }}" method="POST" enctype="multipart/form-data”>
 
     @csrf
     @method('POST')
 
-    <label for="name">Project name</label>
+    <label for=" name">Project name</label>
     <input type="text" name="name" id="name">
 
     <br>
