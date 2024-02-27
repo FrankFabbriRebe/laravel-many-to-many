@@ -37,6 +37,8 @@
             Clik here to edit project
         </a>
 
+        <img src="{{ asset('storage/' . $project -> image) }}" alt="">
+
     </li>
 
     <br>
