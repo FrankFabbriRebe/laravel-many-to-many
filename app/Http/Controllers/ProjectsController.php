@@ -38,10 +38,15 @@ class ProjectsController extends Controller
 
         $type = Type::find($data['type_id']);
 
+        $img = $data['image'];
+        $img_path = Storage::disk('public')->put('images', $img);
+
         $newProject = new Project();
 
         $newProject->name = $data['name'];
         $newProject->author = $data['author'];
+        $newProject->image = $img_path;
+
 
         $newProject->type()->associate($type);
 
