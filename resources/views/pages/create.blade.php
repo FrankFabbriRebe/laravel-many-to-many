@@ -9,7 +9,8 @@
 <h1>Create a new project</h1>
 
 <!-- FORM TO CREATE NEW PROJECT -->
-<form action="{{ route('route.storeNewProject') }}" method="POST" enctype="multipart/form-data”>
+<form method="POST" enctype="multipart/form-data">
+
 
     @csrf
     @method('POST')
