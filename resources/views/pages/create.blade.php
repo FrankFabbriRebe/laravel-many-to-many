@@ -39,9 +39,14 @@
     </label>
     <input type="checkbox" name="technology_id[]" id="{{ 'technology_id_' . $technology -> id }}"
         value="{{ $technology -> id }}">
-    <br>
-
     @endforeach
+
+    <label for="image">Image</label>
+    <input type="file" name="image" id="image" accept="image/png">
+
+    <br>
+    <br>
+    <br>
 
     <input type="submit" value="CREATE">
 
