@@ -39,7 +39,15 @@ class ProjectsController extends Controller
 
         $type = Type::find($data['type_id']);
 
-        $img_path = Storage::put('uploads', $data['image']);
+        // Verifica se è stata caricata un'immagine
+        if ($request->hasFile('image')) {
+            $img = $data['image'];
+            $img_path = Storage::put('uploads', $data['image']);
+
+        } else {
+            // Se nessuna immagine è stata caricata, imposta $img_path a null o a un valore predefinito
+            $img_path = null; // oppure $img_path = 'default/path/to/image.jpg';
+        }
 
         $newProject = new Project();
 
