@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 // import model
 use App\Models\Project;
@@ -38,8 +39,7 @@ class ProjectsController extends Controller
 
         $type = Type::find($data['type_id']);
 
-        $img = $data['image'];
-        $img_path = Storage::disk('public')->put('images', $img);
+        $img_path = Storage::put('uploads', $data['image']);
 
         $newProject = new Project();
 
