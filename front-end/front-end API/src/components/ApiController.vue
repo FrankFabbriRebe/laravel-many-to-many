@@ -30,7 +30,9 @@ export default {
     <div class="container">
         <h1>List of technologies:</h1>
         <div class="techno" v-for="technology in technologies">
-            <h2>{{ technology.name }}</h2>
+            <h2>Name of technology: </h2>
+            <p>{{ technology.name }}</p>
+            <h3>Description of tecnìhnology: </h3>
             <p>{{ technology.description }}</p>
         </div>
     </div>
