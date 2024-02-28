@@ -5,16 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 // import model
-use App\Models\Project;
+use App\Models\Technology;
 
 class ApiController extends Controller
 {
-    public function getProjects()
+    public function getTechnologies()
     {
-        $projects = Project::all();
+        $technologies = Technology::all();
 
         return response()->json([
-            'projects' => $projects,
+            'technologies' => $technologies,
         ]);
     }
 }
